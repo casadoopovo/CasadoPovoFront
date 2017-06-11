@@ -45,8 +45,8 @@ export class PropositurasTabelasComponent implements OnInit, OnChanges {
       this.vereador = this.database.vereadores.find(v =>
       v.nome == this.vereadorNome);
 
-      // let novaProposituraFiltrada: Propositura[] = [];
-      //
+      let novaProposituraFiltrada: Propositura[] = [];
+
       // for(let prop of this.propositurasFiltradas) {
       //   let sessaoVereadorID: number;
       //   sessaoVereadorID = prop.secao_vereador;
@@ -63,8 +63,6 @@ export class PropositurasTabelasComponent implements OnInit, OnChanges {
       //   }
       //
       // }
-
-
       this.propositurasFiltradas = novaProposituraFiltrada;
 
     }
