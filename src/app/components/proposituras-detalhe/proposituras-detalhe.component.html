@@ -1,3 +1,26 @@
-<p>
-  proposituras-detalhe works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
+
+      <h2>{{propositura.tipo}} - {{propositura.numero}}</h2>
+
+      <p>{{propositura.resumo}}</p>
+
+      <md-card class="card">
+
+        <div class="populacao-container">
+          <button md-icon-button>
+            <img src="../../../assets/thumbs-up.png" class="img-responsive imagem">
+          </button>
+          <md-chip>233</md-chip>
+          <button md-icon-button>
+            <img src="../../../assets/thumbs-down.png" class="img-responsive imagem">
+          </button>
+          <md-chip>58</md-chip>
+        </div>
+
+      </md-card>
+
+    </div>
+  </div> <!--End row-->
+</div> <!--End container-->

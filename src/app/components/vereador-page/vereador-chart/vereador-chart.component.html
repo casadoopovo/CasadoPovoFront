@@ -1,1 +1,20 @@
-<div id="pie_chart" [chartData]="pie_ChartData" [chartOptions] = "pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <div id="bar_chart" [chartData]="bar_data" [chartOptions]="bar_options" chartType="BarChart" GoogleChart></div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <div class="chart-container">
+      <div id="pie_chart" [chartData]="pie_ChartDataProposituras" [chartOptions]="pie_ChartOptionsProposituras"
+           chartType="PieChart" GoogleChart></div>
+
+      <div id="pie_chart2" [chartData]="pie_ChartDataRelacao" [chartOptions]="pie_ChartOptionsRelacao"
+           chartType="PieChart" GoogleChart></div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+.card {
+  margin-top: 1em;
+}
+
+.populacao-container {
+  display: flex;
+  align-items: center;
+}
+
+.imagem{
+  width: 40px;
+  height: 40px;
+}

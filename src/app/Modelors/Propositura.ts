@@ -10,7 +10,8 @@ export class Propositura {
               private _resumo: string,
               private _situacao: string,
               private _anexo: string,
-              private _secao_vereador: number) {
+              private _secao_vereador: number,
+              private _vereador_id: number) {
 
   }
 
@@ -42,11 +43,16 @@ export class Propositura {
     return this._secao_vereador;
   }
 
+
+  get vereador_id(): number {
+    return this._vereador_id;
+  }
+
   static fromJSONArray(array: Array<Object>): Propositura[] {
     return array.map(obj =>
 
       new Propositura(obj['id'], obj['tipo'], obj['numero'], obj['resumo'],
-        obj['situacao'], obj['anexo'], obj['secao_vereador']));
+        obj['situacao'], obj['anexo'], obj['secao_vereador'], obj['vereador_id']));
 
   }
 }
