@@ -1,0 +1,15 @@
+
+.center th{
+  text-align: center;
+
+}
+
+.center th button {
+  margin: 0 1em 0 1em;
+}
+
+@media screen and (max-width: 425px) {
+  .center th button{
+    margin: .1em;
+  }
+}

@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Número</th>
+    <th>Resumo</th>
+    <th>Detalhes</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let propositura of propositurasFiltradas">
+    <td>{{propositura.numero}}</td>
+    <td>{{propositura.resumo.length > 30 ? propositura.resumo.substr(0, 30) + "..." : propositura.resumo}}</td>
+    <td>
+      <button md-button (click)="detalhes(propositura)">Detalhes</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

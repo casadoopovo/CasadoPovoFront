@@ -23,24 +23,34 @@ export class ServiceProvider {
   /*
    * Pega o Json no Servidor com as informações especificas do vereador.
    */
-  getVereador(vereadorNome: string) {
-    let urlParaDownload: string = Constants.VEREADOR_URL + vereadorNome + ".json";
+  getProposituras() {
+    let urlParaDownload: string = Constants.PROPOSITURAS_URL;
 
     console.log("caminho " + urlParaDownload);
     return this.http.get(urlParaDownload)
-      .timeout(7000)
       .map((res: Response) => res.json());
   }
 
   /*
    * Pega o Json no Servidor com as informações das impressoras.
    */
-  getSessao(sessao: Sessao) {
-    let urlParaDownload: string = Constants.SESSAO_URL + sessao.numero_sessao + ".json";
+  getSessao() {
+    let urlParaDownload: string = Constants.SESSAO_URL;
 
     console.log("caminho " + urlParaDownload);
     return this.http.get(urlParaDownload)
-      .timeout(7000)
+      .map((res: Response) => res.json());
+  }
+
+
+  /*
+   * Pega o Json no Servidor com as informações das impressoras.
+   */
+  getSessaoVereadores() {
+    let urlParaDownload: string = Constants.SESSAO_VEREADORES_URL;
+
+    console.log("caminho " + urlParaDownload);
+    return this.http.get(urlParaDownload)
       .map((res: Response) => res.json());
   }
 

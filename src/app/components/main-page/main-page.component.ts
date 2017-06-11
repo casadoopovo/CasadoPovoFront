@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ServiceProvider} from "../../providers/Service.provider";
 import {Vereador} from "../../Modelors/Vereador";
-import {VereadoresDB} from "../../providers/VereadoresDB";
+import {DataBase} from "../../providers/DataBase";
 
 @Component({
   selector: 'cp-main-page',
@@ -13,7 +13,7 @@ export class MainPageComponent implements OnInit {
   vereadores: Vereador[] = [];
   carregando: boolean = false;
 
-  constructor(private serviceProvider: ServiceProvider, private vereadoresDB: VereadoresDB) {
+  constructor(private serviceProvider: ServiceProvider, private vereadoresDB: DataBase) {
   }
 
   ngOnInit() {

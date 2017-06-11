@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
 import {Vereador} from "../../Modelors/Vereador";
-import {VereadoresDB} from "../../providers/VereadoresDB";
+import {DataBase} from "../../providers/DataBase";
 
 @Component({
   selector: 'cp-vereador-page',
@@ -15,7 +15,7 @@ export class VereadorPageComponent implements OnInit, OnDestroy {
 
   vereador: Vereador;
 
-  constructor(private route: ActivatedRoute, private vereadoresDB: VereadoresDB) {
+  constructor(private route: ActivatedRoute, private vereadoresDB: DataBase) {
   }
 
   ngOnInit() {

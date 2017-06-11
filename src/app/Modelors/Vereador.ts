@@ -72,9 +72,14 @@ export class Vereador {
     this._declaracao_bens_depois = value;
   }
 
+
+  get id(): number {
+    return this._id;
+  }
+
   static fromJSONArray(array: Array<Object>): Vereador[] {
-    return array['vereadores'].map(obj => {
-      let vereador = new Vereador(obj['id'], obj['nome'], obj['partido'], Constants.API + obj['foto'],
+    return array.map(obj => {
+      let vereador = new Vereador(obj['id'], obj['nome'], obj['partido'], obj['foto'],
         obj['inicio'], obj['situacao']);
 
       console.log(Constants.API + obj['foto']);

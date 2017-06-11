@@ -1,3 +1,13 @@
-<p>
-  proposituras-page works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
+      <h3 *ngIf="vereadorNome">Vereador: {{vereadorNome}}</h3>
+      <h4>Filtro: {{situacao}}</h4>
+      <div class="proposituras-container">
+        <cp-btns-proposituras (filtro)="filtrar($event)"></cp-btns-proposituras>
+        <cp-proposituras-tabelas [situacao]="situacao" [vereadorNome]="vereadorNome" [proposituras]="proposituras"></cp-proposituras-tabelas>
+      </div>
+
+    </div>
+  </div> <!--End row-->
+</div> <!--End container-->

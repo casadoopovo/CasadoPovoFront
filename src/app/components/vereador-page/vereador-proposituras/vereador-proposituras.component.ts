@@ -14,10 +14,10 @@ export class VereadorPropositurasComponent {
 
   @Input() vereador: Vereador;
 
-  navegaPropositura(tipo: string) {
+  navegaPropositura(situacao: string) {
     let extras: NavigationExtras = {
       queryParams: {
-        "tipo": tipo
+        "situacao": situacao
       }
     };
 

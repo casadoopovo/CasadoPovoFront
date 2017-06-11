@@ -17,7 +17,12 @@ import { VereadorDetalhesComponent } from './components/vereador-page/vereador-d
 import { VereadorPropositurasComponent } from './components/vereador-page/vereador-proposituras/vereador-proposituras.component';
 import { PropositurasPageComponent } from './components/proposituras-page/proposituras-page.component';
 import {Constants} from "./providers/Constants";
-import {VereadoresDB} from "./providers/VereadoresDB";
+import {DataBase} from "./providers/DataBase";
+import { BtnsPropositurasComponent } from './components/proposituras-page/btns-proposituras/btns-proposituras.component';
+import { VereadorChartComponent } from './components/vereador-page/vereador-chart/vereador-chart.component';
+import { GoogleChartComponent } from './google-chart/google-chart.component';
+import { PropositurasTabelasComponent } from './components/proposituras-page/proposituras-tabelas/proposituras-tabelas.component';
+import { PropositurasDetalheComponent } from './components/proposituras-detalhe/proposituras-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import {VereadoresDB} from "./providers/VereadoresDB";
     VereadorPageComponent,
     VereadorDetalhesComponent,
     VereadorPropositurasComponent,
-    PropositurasPageComponent
+    PropositurasPageComponent,
+    BtnsPropositurasComponent,
+    VereadorChartComponent,
+    GoogleChartComponent,
+    PropositurasTabelasComponent,
+    PropositurasDetalheComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +52,7 @@ import {VereadoresDB} from "./providers/VereadoresDB";
     ServiceProvider,
     AdminGuard,
     Constants,
-    VereadoresDB
+    DataBase
   ],
   bootstrap: [AppComponent]
 })
