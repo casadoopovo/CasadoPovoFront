@@ -2,18 +2,22 @@
  * Created by Bruno Melo on 10/06/17.
  */
 
+import {Constants} from "app/providers/Constants";
+
 export class Vereador {
 
-  constructor(private _nome: string,
+  private _votos: number;
+  private _mandato_fim: number;
+  private _declaracao_bens_antes: number;
+  private _declaracao_bens_depois: number;
+
+  constructor(private _id: number,
+              private _nome: string,
               private _partido: string,
               private _foto_url: string,
-              private _votos:number,
-              private _mandato_inicio:number,
-              private _mandato_fim:number,
-              private _declaracao_bens_antes:number,
-              private _declaracao_bens_depois:number) {
+              private _mandato_inicio: number,
+              private _reeleito: boolean) {
   }
-
 
   get nome(): string {
     return this._nome;
@@ -46,5 +50,40 @@ export class Vereador {
 
   get declaracao_bens_depois(): number {
     return this._declaracao_bens_depois;
+  }
+
+  get reeleito(): boolean {
+    return this._reeleito;
+  }
+
+  set votos(value: number) {
+    this._votos = value;
+  }
+
+  set mandato_fim(value: number) {
+    this._mandato_fim = value;
+  }
+
+  set declaracao_bens_antes(value: number) {
+    this._declaracao_bens_antes = value;
+  }
+
+  set declaracao_bens_depois(value: number) {
+    this._declaracao_bens_depois = value;
+  }
+
+  static fromJSONArray(array: Array<Object>): Vereador[] {
+    return array['vereadores'].map(obj => {
+      let vereador = new Vereador(obj['id'], obj['nome'], obj['partido'], Constants.API + obj['foto'],
+        obj['inicio'], obj['situacao']);
+
+      console.log(Constants.API + obj['foto']);
+
+      vereador.votos = obj['votos'];
+      vereador.mandato_fim = obj['fim'];
+      vereador.declaracao_bens_antes = obj['bens'];
+
+      return vereador;
+    });
   }
 }

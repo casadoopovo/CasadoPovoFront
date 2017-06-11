@@ -1,0 +1,10 @@
+.frames {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em;
+  justify-content: center;
+}
+
+.frame {
+  margin: 1em;
+}

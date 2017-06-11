@@ -1,0 +1,9 @@
+.link {
+  text-decoration: underline;
+  color: orange;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+}

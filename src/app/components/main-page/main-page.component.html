@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
+
+      <p *ngIf="carregando">Carregando...</p>
+      <cp-frames-containers [vereadores]="vereadores" *ngIf="!carregando"></cp-frames-containers>
+
+    </div>
+  </div> <!--End row-->
+</div> <!--End container-->

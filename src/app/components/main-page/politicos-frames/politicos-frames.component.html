@@ -1,0 +1,5 @@
+<div class="frame" (click)="navegarVereador()" >
+  <img class="img-circle" src="{{vereador.foto_url}}">
+  <span class="nome">{{vereador.nome}} <span class="partido">({{vereador.partido}})</span></span>
+  <span class="partido">Ano Eleito: {{vereador.mandato_inicio}} <span *ngIf="vereador.reeleito">(Reeleito)</span></span>
+</div>

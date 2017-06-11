@@ -1,0 +1,38 @@
+<div class="principal">
+  <div class="informacoes">
+    <h2>{{vereador.nome}}</h2>
+    <p>Partido: <span class="infos">{{vereador.partido}}</span></p>
+    <p>Votos: <span class="infos">{{vereador.votos}}</span></p>
+    <p>Ano Eleito: <span class="infos">{{vereador.mandato_inicio}}</span></p>
+    <p>Fim do mandato: <span class="infos">{{vereador.mandato_fim}}</span></p>
+    <p>Declaração de bens: <span class="infos">{{vereador.declaracao_bens_antes}}</span></p>
+    <div class="redes-sociais">
+      <p>Redes sociais: </p>
+      <a href="#">
+        <img class="img-redes-sociais" src="https://seeklogo.com/images/W/whatsapp-logo-8AE44BBBB0-seeklogo.com.png"
+             alt="whatsapp">
+      </a>
+      <a href="#">
+        <img class="img-redes-sociais"
+             src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052016/untitled-1_151.png?itok=5pgkMHV0"
+             alt="instagram">
+      </a>
+      <a href="#">
+        <img class="img-redes-sociais"
+             src="http://curm1.byu.edu/wp-content/uploads/2015/12/facebook-logo-png-transparent-background-i5-e1451499232830.png"
+             alt="facebook">
+      </a>
+      <a href="#">
+        <img class="img-redes-sociais"
+             src="https://www.micron.com/~/media/track-3-images/icons/social-media/twitter_logo.png?h=180&w=180&la=en"
+             alt="twitter">
+      </a>
+      <a href="#">
+        <img class="img-redes-sociais" src="http://www.airportmini-storage.com/images/email_clipart.png" alt="email">
+      </a>
+    </div>
+  </div>
+  <div>
+    <img src="{{vereador.foto_url}}" alt="{{vereador.nome}}" class="imagem img-responsive">
+  </div>
+</div>

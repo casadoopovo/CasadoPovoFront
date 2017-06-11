@@ -1,0 +1,38 @@
+.img-circle {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame:hover,
+.frame:focus {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .img-circle {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.nome {
+  font-size: large;
+  font-weight: bold;
+}
+
+.partido {
+  font-style: italic;
+  font-weight: normal;
+}
+
+div {
+  width: 225px;
+  height: 225px;
+}

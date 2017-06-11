@@ -1,21 +1,27 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainPageComponent} from "./main-page/main-page.component";
+import {MainPageComponent} from "./components/main-page/main-page.component";
 import {AdminGuard} from "./guards/AdminGuard";
+import {VereadorPageComponent} from "./components/vereador-page/vereador-page.component";
+import {PropositurasPageComponent} from "./components/proposituras-page/proposituras-page.component";
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {
-    path: 'vereador:nome',
-
+    path: 'vereador/:nome',
+    component: VereadorPageComponent
   },
   {
-    path: 'sessoes',
-
+    path: 'proposituras/:nome',
+    component: PropositurasPageComponent
+  },
+  {
+    path: 'proposituras',
+    component: MainPageComponent
   },
   {
     path: 'admin',
-
+    component: MainPageComponent,
     canActivate:[AdminGuard]
   },
   {path: '', redirectTo: '', pathMatch: 'full'},

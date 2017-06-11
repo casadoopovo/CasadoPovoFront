@@ -1,0 +1,31 @@
+.principal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-redes-sociais {
+  width: 30px;
+}
+
+.redes-sociais {
+  display: flex;
+  align-items: baseline;
+}
+
+.redes-sociais > p {
+  margin-right: 1em;
+}
+
+
+@media screen and (max-width: 425px) {
+  .principal {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
